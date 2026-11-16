@@ -1,0 +1,11 @@
+.board-token.motion-hop{transition:left .2s linear,top .2s linear}
+.board-token.motion-hop span{display:block;animation:board-hop .22s ease-in-out}
+.board-token.motion-slide{transition:left .04s linear,top .04s linear}
+.board-token.motion-slide span{display:block;animation:board-wiggle .22s ease-in-out infinite alternate}
+.board-token.motion-climb{transition:left .85s linear,top .85s linear}
+.board-token.motion-climb span{display:block;animation:board-climb .22s ease-in-out infinite alternate}
+.board-cell.finish-cell .finish-flag{font-size:clamp(20px,2.6vw,32px);color:#754919;line-height:1;inset:20% 0 0;text-align:center}
+@keyframes board-hop{50%{transform:translateY(-9px) scale(1.08)}}
+@keyframes board-wiggle{from{transform:rotate(-18deg)}to{transform:rotate(18deg)}}
+@keyframes board-climb{from{transform:rotate(-10deg)}to{transform:rotate(10deg)}}
+@media(prefers-reduced-motion:reduce){.board-token.motion-hop,.board-token.motion-slide,.board-token.motion-climb{transition:none;animation:none}.board-token.motion-hop span,.board-token.motion-slide span,.board-token.motion-climb span{animation:none}}
